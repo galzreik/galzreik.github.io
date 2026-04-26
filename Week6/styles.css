@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg,
+            #ffffff,
+            #bfd4ff,
+            #ffffff);
+    color: #002e74;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: transparent;
+    color: #002e74;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.card {
+    background: linear-gradient(180deg,
+            #ffffff,
+            #bfd4ff,
+            #ffffff);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    /* border: 6px solid white; */
+    box-shadow: 0 6px 20px rgba(44, 85, 209, 0.254);
+}
+
+button {
+    background-color: #77a5ff;
+    color: #ffffff;
+    border: 3px solid white;
+    padding: 12px 18px;
+    margin: 8px 5px 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: #91b6ff;
+    border: 3px solid #91b6ff;
+    border-radius: 15px;
+}
+
+input {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #77a5ff;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #77a5ff;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    background: transparent;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#typingMessage {
+    color: #77a5ff;
+    font-weight: bold;
+}
+
+.hover-card {
+    transition: 0.3s;
+}
+
+.hover-active {
+    transform: scale(1.03);
+    background: linear-gradient(135deg,
+            #0b1a30,
+            #10233f,
+            #142b4a,
+            #0f1f38,
+            #0b1a30);
+    color: #e5edf7;
+    border: 6px solid #243b5a;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: #010f25;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: linear-gradient(135deg,
+            #0b1a30,
+            #10233f,
+            #142b4a,
+            #0f1f38,
+            #0b1a30);
+    color: #e5edf7;
+}
+
+.dark-mode header {
+    background: transparent;
+    color: #e5edf7;
+}
+
+.dark-mode .card {
+    background: linear-gradient(135deg,
+            #0b1a30,
+            #10233f,
+            #142b4a,
+            #0f1f38,
+            #0b1a30);
+    color: #e5edf7;
+    border: 6px solid #243b5a;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode .hover-active {
+    transform: scale(1.03);
+    background: linear-gradient(180deg,
+            #ffffff,
+            #bfd4ff,
+            #ffffff);
+    color: #002e74;
+    border: 6px solid white;
+}
+
+.dark-mode button {
+    background-color: #16639d;
+    color: white;
+    border: 3px solid #72a0c3;
+}
+
+.dark-mode button:hover {
+    background-color: #114087;
+    color: white;
+    border: 3px solid #e7f4ff;
+}
+
+.dark-mode input {
+    background-color: #0b1a30;
+    color: #e5edf7;
+    border: 2px solid #2f6f9f;
+}
+
+.dark-mode li {
+    background-color: #203a59;
+}
+
+.dark-mode #typingMessage {
+    color: #8fc7f5;
+}
+
+.dark-mode footer {
+    background: transparent;
+    color: #e5edf7;
+}

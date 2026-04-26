@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cozy Study Planner</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Cozy Study Planner</h1>
+
+        <!-- This text will change based on time of day -->
+        <p id="greeting">Welcome!</p>
+    </header>
+
+    <main>
+
+        <!-- Theme section -->
+        <section class="card">
+            <h2>Theme Settings</h2>
+            <p>Choose a theme for your study space.</p>
+
+            <!-- Buttons trigger click events -->
+            <button id="darkBtn">Dark Mode</button>
+            <button id="lightBtn">Light Mode</button>
+        </section>
+
+        <!-- Task list section -->
+        <section class="card">
+            <h2>Study Task List</h2>
+            <p>Add something you need to finish today.</p>
+
+            <!-- Input field triggers input event -->
+            <input type="text" id="taskInput" placeholder="Ex: Finish JavaScript homework">
+
+            <!-- Button triggers click event -->
+            <button id="addTaskBtn">Add Task</button>
+
+            <!-- Message updates when user types -->
+            <p id="typingMessage"></p>
+
+            <!-- List where tasks will be added -->
+            <ul id="taskList">
+            </ul>
+        </section>
+
+        <!-- Hover interaction section -->
+        <section class="card hover-card" id="hoverCard">
+            <h2>Hover Over Me</h2>
+
+            <!-- Text changes when hovered -->
+            <p id="hoverText">Move your mouse over this card to see a study reminder.</p>
+        </section>
+
+        <!-- Motivation section -->
+        <section class="card">
+            <h2>Motivation</h2>
+
+            <!-- Text changes when button is clicked -->
+            <p id="quoteText">Click the button for a motivational quote.</p>
+
+            <button id="quoteBtn">New Quote</button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Ghofran Alzreikat for Week 6 JavaScript Events Assignment</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
