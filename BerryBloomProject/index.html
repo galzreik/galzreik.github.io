@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Bloom Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- PAGE 1: WELCOME -->
+  <section id="welcomePage" class="page active welcome-page">
+    <img src="images/welcomePage.png" class="bg-image" alt="Welcome to Strawberry Bloom Garden" />
+  
+    <button id="welcomeNextBtn" class="center-btn">
+      Let's Go Harvesting!
+    </button>
+  </section>
+
+  <!-- PAGE 3: CELLULAR AUTOMATON -->
+  <section id="gamePage" class="page game-page">
+
+    <button id="gameBackBtn" class="page-back">Back</button>
+
+    <header class="game-header">
+
+      <div class="garden-title">
+        <h1>*Strawberry Bloom Garden*</h1>
+        <p>Strawberry Harvest Season..!</p>
+      </div>
+
+      
+    </header>
+
+    <main class="game-layout">
+      <section class="panel">
+        <h2>Garden Controls</h2>
+
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="pauseBtn">Pause & Calculate Harvest</button>
+          <button id="stepBtn">Step</button>
+          <button id="clearBtn">Clear</button>
+          <button id="resetBtn">Random Reset</button>
+        </div>
+
+        <div class="settings">
+          <label>
+            Brush:
+            <select id="brushSelect">
+              <option value="0">Empty Soil</option>
+              <option value="1">Planted Seeds</option>
+              <option value="2">Blossoms' Bush</option>
+              <option value="3">Strawberries' Bush</option>
+              <option value="4">Withered Bush</option>
+              <option value="5">Pebble Block</option>
+              <option value="6">Sun</option>
+              <option value="7">Watering Can</option>
+              <option value="8">Raining Cloud</option>
+            </select>
+          </label>
+
+          <label>
+            Preset:
+            <select id="presetSelect">
+              <option value="random">Random Strawberry Garden</option>
+              <option value="balanced">Balanced Season</option>
+              <option value="dry">Dry Season Challenge</option>
+              <option value="rainy">Rainy Garden</option>
+            </select>
+          </label>
+
+          <button id="loadPresetBtn">Load Preset</button>
+        </div>
+
+        <div class="info">
+          <p><strong>Generation:</strong> <span id="generationCount">0</span></p>
+          <p><strong>Strawberry Bushes:</strong> <span id="strawberryCount">0</span></p>
+          <p><strong>Goal:</strong> Harvest at least 20 strawberry Bushes to go baking!</p>
+        </div>
+      </section>
+
+      <section class="canvas-section">
+        <canvas id="gardenCanvas"></canvas>
+      </section>
+
+      <section class="legend">
+        <h2>Cell States</h2>
+        <div><img src="images/soil.png" class="legend-img" alt=""> Empty Soil</div>
+        <div><img src="images/seed.png" class="legend-img" alt=""> Planted Seeds</div>
+        <div><img src="images/blossom.png" class="legend-img" alt=""> Blossoms' Bush</div>
+        <div><img src="images/strawberry.png" class="legend-img" alt=""> Strawberries' Bush</div>
+        <div><img src="images/withered.png" class="legend-img" alt=""> Withered Bush</div>
+        <div><img src="images/pebble.png" class="legend-img" alt=""> Pebble Block</div>
+        <div><img src="images/sun.png" class="legend-img" alt=""> Sun</div>
+        <div><img src="images/water.png" class="legend-img" alt=""> Watering Can</div>
+        <div><img src="images/rain.png" class="legend-img" alt=""> Raining Cloud</div>
+      </section>
+    </main>
+
+    <section id="harvestMessage" class="harvest-message hidden"></section>
+
+    <section class="description">
+      <h2>Project Description</h2>
+      <p>
+        Strawberry Bloom Garden is a deterministic cellular automaton. Each tile changes based on its current
+        state and its Moore neighborhood. Seeds and plants need both sunlight and water to survive.
+      </p>
+    </section>
+  </section>
+
+  <!-- PAGE 5: SWEET CHOICE -->
+  <section id="choicePage" class="page choice-page">
+    <button id="choiceBackBtn" class="page-back">Back</button>
+    <img src="images/logo.png" class="choice-logo" alt="Berry Bloom Garden Logo" />
+
+    <div id="choiceMenu" class="choice-card">
+      <h1>What should we make with our strawberries?</h1>
+      <p>Choose one sweet treat to make.</p>
+
+      <div class="sweet-buttons">
+        <button data-sweet="cupcake">A Big Cupcake With A Friend?</button>
+        <button data-sweet="birthday">A Birthday Cake For A Friend?</button>
+        <button data-sweet="jam">Strawberry Jam?</button>
+        <button data-sweet="picnic">Save For A Picnic With Friends?</button>
+        <button data-sweet="bigcake">A Big Cake?</button>
+      </div>
+    </div>
+
+    <div id="sweetResult" class="sweet-result hidden">
+      <img id="sweetImage" src="" alt="" />
+      <div class="recipe-card">
+        <h2 id="sweetTitle"></h2>
+        <h3>Ingredients:...</h3>
+        <ul id="ingredientsList"></ul>
+        <h3>Steps:...</h3>
+        <ol id="stepsList"></ol>
+
+        <div class="result-buttons">
+          <button id="chooseAnotherBtn">Choose Another Sweet</button>
+          <button id="restartBtn">Restart Game</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
